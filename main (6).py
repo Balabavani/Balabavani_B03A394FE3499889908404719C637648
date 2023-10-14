@@ -1,23 +1,19 @@
-class Student:
-    def __init__(self, name, roll_number, cgpa):
-        self.name = name
-        self.roll_number = roll_number
-        self.cgpa = cgpa
+# Python program to find the factorial of a number provided by the user.
 
-    def __repr__(self):
-        return f"Student(name='{self.name}', roll_number='{self.roll_number}', cgpa={self.cgpa})"
+# change the value for a different result
+num = 7
 
-def sort_students(student_list):
-    sorted_students = sorted(student_list, key=lambda x: x.cgpa, reverse=True)
-    return sorted_students
+# To take input from the user
+#num = int(input("Enter a number: "))
 
-# Sample usage
-students = [
-    Student("Alice", "S12345", 3.8),
-    Student("Bob", "S67890", 3.5),
-    Student("Charlie", "S13579", 3.9),
-]
+factorial = 1
 
-sorted_students = sort_students(students)
-for student in sorted_students:
-    print(student)
+# check if the number is negative, positive or zero
+if num < 0:
+   print("Sorry, factorial does not exist for negative numbers")
+elif num == 0:
+   print("The factorial of 0 is 1")
+else:
+   for i in range(1,num + 1):
+       factorial = factorial*i
+   print("The factorial of",num,"is",factorial)
